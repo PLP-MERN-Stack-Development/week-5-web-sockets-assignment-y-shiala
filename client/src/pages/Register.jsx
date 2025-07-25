@@ -1,10 +1,10 @@
-// client/src/pages/Login.jsx
+// client/src/pages/Register.jsx
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import LoginForm from '../components/auth/LoginForm';
+import RegisterForm from '../components/auth/RegisterForm';
 
-const Login = () => {
+const Register = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
 
@@ -19,13 +19,13 @@ const Login = () => {
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Sign in to your account
+            Create a new account
           </h2>
         </div>
-        <LoginForm />
+        <RegisterForm />
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
